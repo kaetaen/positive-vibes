@@ -1,0 +1,24 @@
+{
+  "name": "positive-vibes",
+  "version": "1.0.0",
+  "description": "API Rest que fornece mensagens positivas obtidas de O Pensador",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaetaen/positive-vibes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaetaen/positive-vibes/issues"
+  },
+  "homepage": "https://github.com/kaetaen/positive-vibes#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
