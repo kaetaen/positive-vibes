@@ -3,6 +3,7 @@ const routes = Router()
 
 const QuoteController = require('./app/controllers/QuoteController')
 
-routes.get('/quote', QuoteController.getQuote)
+routes.get('/quotes', QuoteController.index)
+routes.get('/quotes/random', QuoteController.random)
 
 module.exports = routes
