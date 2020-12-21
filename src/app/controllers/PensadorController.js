@@ -1,7 +1,6 @@
-const PensadorScraper = require('../../services/scraper')
+const PensadorScraper = require('../../services/PensadorScraper')
 
-class Quote {
-
+class Pensador {
   async index (_req, res) {
     const quotes = await PensadorScraper.getQuotes()
     
@@ -17,4 +16,4 @@ class Quote {
   }
 }
 
-module.exports = new Quote
+module.exports = new Pensador
