@@ -15,4 +15,4 @@ class JamendoController {
   }
 }
 
-module.exports = new JamendoControler()
+module.exports = new JamendoController()
