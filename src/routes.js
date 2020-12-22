@@ -8,6 +8,6 @@ routes.get('/quotes', PensadorController.index)
 routes.get('/quotes/random', PensadorController.random)
 
 routes.get('/songs', JamendoController.index)
-
+routes.get('/songs/random', JamendoController.random)
 
 module.exports = routes
