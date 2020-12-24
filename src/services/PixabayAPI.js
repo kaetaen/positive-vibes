@@ -32,6 +32,4 @@ class Pixabay {
   }
 }
 
-const pixabay = new Pixabay()
-
-pixabay.parseImages()
+module.exports = new Pixabay()
