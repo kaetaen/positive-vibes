@@ -4,7 +4,12 @@ const routes = require('./routes')
 class App {
   constructor () {
     this.app = express()
+    this.middlewares()
     this.routes()
+  }
+
+  middlewares () {
+    this.app.use(express.static(__dirname + '/static'))
   }
 
   routes () {

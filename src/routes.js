@@ -1,9 +1,13 @@
 const { Router } = require('express')
 const routes = Router()
 
+const { resolve } = require('path')
+
 const JamendoController = require('./app/controllers/JamendoController')
 const PensadorController = require('./app/controllers/PensadorController')
 const PixabayController = require('./app/controllers/PixabayController')
+
+routes.get('/', (_req, res) => res.sendFile('index.html'))
 
 routes.get('/quotes', PensadorController.index)
 routes.get('/quotes/random', PensadorController.random)
