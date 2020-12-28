@@ -10,7 +10,7 @@ class App {
   }
 
   middlewares () {
-    this.app.use(cors())
+    this.app.use(cors({ origin: '*' }))
     this.app.use(express.static(__dirname + '/static'))
   }
 
