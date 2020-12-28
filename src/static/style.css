@@ -1,0 +1,116 @@
+header {
+  margin-bottom: 5%;
+}
+
+header p {
+  font-size: 22px;
+}
+
+.resource-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.5);
+}
+
+.interface {
+  margin-bottom: 0px;
+}
+
+section {
+  margin-top: 10px;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+
+
+.card-body h1, a, .main-title, .section-title {
+  color: #45b6fe;
+}
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 480px) { 
+  .title-link {
+    font-size: 25px;
+  }
+
+  .p-content {
+    font-size: 18px;
+  }
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+  .title-link {
+    font-size: 25px;
+  }
+
+  .p-content {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 50px;
+    text-shadow: 2px 2px 2px #45b6fe;
+  }
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .title-link {
+    font-size: 25px;
+  }
+
+  .p-content {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 50px;
+    text-shadow: 2px 2px 2px #45b6fe;
+  }
+
+  .content-area {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  header {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 980px) {
+  .title-link {
+    font-size: 25px;
+  }
+
+  .p-content {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 50px;
+    text-shadow: 2px 2px 2px #45b6fe;
+  }
+
+  .content-area {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  header {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+}
+
+

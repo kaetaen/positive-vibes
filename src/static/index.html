@@ -5,12 +5,98 @@
   <title> Positive Vibes </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+<style>
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;    
+}
+</style>
 </head>
 <body>
-  <div>
-    <h1> Positive Vibes </h1>
-    <p> Vibes positivas. Mensagens, músicas, imagens... para você se lembrar de que o mundo é muito belo, e sua existência é um universo </p>
+  <div class="interface container-fluid jumbotron bg-dark">
+    <header class="text-center text-light">
+      <h1 class="main-title display-4"> Positive Vibes </h1>
+      <p class="font-weight-normal"> Vibes positivas, mensagens, músicas, imagens para você se lembrar de que o mundo é muito belo, e sua existência é um universo. </p>
+    </header>
+
+    <main class="content-area card jumbotron bg-secondary">
+      <section>
+        <h1 class="section-title font-weight-light text-light font-weight-normal text-center text-lg-left"> Recursos </h1>
+        <article class="card resource-item  bg-dark text-light">
+          <div class="card-body"> 
+          <h1 class="font-weight-light"> Frases </h1>
+          <p class="lead font-weight-normal"> O recurso de frases é construido em cima de  raspagem de dados do site  O Pensador.</p>
+            <h2><a class="title-link font-weight-bold text-left btn btn-block btn-lg btn-primary" href="/quotes" target="_blank" > /quotes </a></h2>
+            <p class="p-content"> Retorna um JSON contento todas as frases.</p>
+            <h2><a class="title-link font-weight-bold text-left btn btn-block btn-lg btn-primary" href="/quotes/random" target="_blank"> /quotes/random </a></h2>
+            <p class="p-content"> Retorna um JSON contendo uma frase aleatória.</p>
+          </div>
+        </article>
+
+        <article class="card resource-item bg-dark text-light">
+          <div class="card-body">
+            <h1 class="font-weight-light"> Músicas </h1>
+            <p class="p-content"> O recurso de músicas utiliza a API do Jamendo para consumir dados e arquivos de playlists específicas do Jamendo.</p>
+            <h2><a class="title-link font-weight-bold text-left btn btn-block btn-lg btn-primary"  href="/songs"  target="_blank"> /songs </a></h2>
+            <p class="p-content"> Retorna um JSON contendo informações de todas as músicas disponíveis.</p>
+            <h2><a class="title-link font-weight-bold text-left btn btn-block btn-lg btn-primary" href="/songs/random" target="_blank"> /songs/random </a></h2>
+            <p class="p-content"> Retorna um arquivo de audio MP3 aleatório.</p>
+          </div>
+        </article>
+        
+        <article class="card resource-item bg-dark text-light">
+          <div class="card-body">
+            <h1 class="font-weight-light"> Imagens </h1>
+            <p class="p-content"> O recurso de imagens utiliza a API do Pixabay para consumir dados e arquivos do Pixabay.</p>
+            <h2><a class="title-link font-weight-bold text-left btn btn-block btn-lg btn-primary" href="/images" target="_blank"> /images </a></h2>
+            <p class="p-content"> Retorna um JSON contendo todas as imagens. </p>
+            <h2><a class="title-link font-weight-bold text-left btn btn-block btn-lg btn-primary" href="/images/random" target="_blank"> /images/random </a></h2>
+            <p class="p-content"> Retorna um arquivo de imagem aleatório. </p>
+          </div>
+        </article>
+      </section>
+
+     <section>
+       <h1 class="section-title font-weight-light text-light font-weight-normal text-center text-lg-left"> Referências </h1>
+      <article class="card resource-item bg-dark text-light">
+        <div class="card-body">
+          <h1 class="font-weight-light"><a href="https://www.pensador.com/" target="_blank"> O Pensador </a></h1>
+          <p class="p-content"> As frases providas pela API são obtidas através de uma raspagem de dados realizada no site. <a href="https://www.pensador.com/" target="_blank"> O Pensador </a></p>
+        </div>
+      </article>
+
+     <article class="card resource-item bg-dark text-light">
+        <div class="card-body">
+          <h1 class="font-weight-light"><a href="https://www.jamendo.com/" target="_blank"> Jamendo </a></h1>
+          <p class="p-content"> As músicas são obtidas por meio da API do <a href="https://developer.jamendo.com/" target="_blank"> Jamendo</a>, é necessário se cadastrar com uma conta de desenvolvedor para obter uma chave de acesso à API. </p>
+        </div>
+      </article>
+
+     <article class="card resource-item bg-dark text-light">
+        <div class="card-body">
+          <h1 class="font-weight-light"><a href="https://pixabay.com/" target="_blank"> Pixabay </a></h1>
+          <p class="p-content"> As imagens são obtidas por meio da API do <a href="https://pixabay.com/api/docs/" target="_blank"> Pixabay </a> e assim como no caso do Jamendo, é necessário se cadastrar com uma conta de desenvolvedor para obter uma chave de acesso à API.</p>
+        </div>
+      </article>
+     </section>
+
+     <section>
+       <h1 class="section-title font-weight-light text-light font-weight-normal text-center text-lg-left"> Nota </h1>
+      <article class="card resource-item bg-dark text-light">
+        <div class="card-body">
+          <h1 class="font-weight-light"> Sobre o uso </h1>
+          <p class="p-content"> Essa aplicação não possui fins lucrativos, o uso dos conteúdos fora deste propósito devem estar devidamente de acordo com a licensa dos provedores originais de seus respectivos conteúdos. </p>
+        </div>
+      </article>
+     </section>
+    </main>
+
+    <footer>
+      <div class="text-light text-lg-center text-md-left"><p class="p-content"> Desenvolvido por <a class="github-link" href="https://github.com/kaetaen" target="_blank"> Rubens dos Santos </a> sob a licensa MIT. </p></div>
+    </footer>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
