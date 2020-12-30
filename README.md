@@ -1,4 +1,10 @@
-# Positive Vibes
+<h1 align="center"> Positive Vibes </h1>
+
+<p align="center"><img src="https://media.giphy.com/media/Q8sXvj1tYnNZrH1Kmg/giphy.gif" /><p>
+
+> _"Seja forte e corajoso"_
+
+> — Josué 1:9
 
 ## Descrição 
 
