@@ -1,8 +1,7 @@
 # Positive Vibes
 
 > _"Seja forte e corajoso"_
-
-> — Josué 1:9
+> <br>— Josué 1:9
 
 <p><img src="https://media.giphy.com/media/Q8sXvj1tYnNZrH1Kmg/giphy.gif" /><p>
 
