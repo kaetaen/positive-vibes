@@ -4,7 +4,7 @@ class Pensador {
   async index (_req, res) {
     const quotes = await PensadorScraper.getQuotes()
     
-    return res.json({ data: quotes})
+    return res.json({ data: quotes })
   }
 
   async random (_req, res) {

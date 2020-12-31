@@ -13,6 +13,7 @@ class Pensador {
     const randomImage = images[randomize]
 
     return res.json({ data: randomImage })
-}}
+  }
+}
 
 module.exports = new Pensador

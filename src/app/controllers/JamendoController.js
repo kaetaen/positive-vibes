@@ -1,6 +1,5 @@
 const JamendoAPI = require('../../services/JamendoAPI')
 
-
 class JamendoController {
   async index (_req, res) {
     const songs = await JamendoAPI
@@ -11,7 +10,7 @@ class JamendoController {
 
       return songInfo
     })
-
+    
     res.status(200).json({ data: songList })
   }
 
