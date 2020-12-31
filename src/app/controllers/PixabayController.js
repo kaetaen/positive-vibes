@@ -4,7 +4,7 @@ class Pensador {
   async index (_req, res) {
     const images = await Pixabay.parseImages()
     
-    return res.json({ media: images })
+    return res.json({ data: images })
   }
 
   async random (_req, res) {
@@ -12,7 +12,7 @@ class Pensador {
     const randomize = Math.floor(Math.random() * images.length)
     const randomImage = images[randomize]
 
-    return res.redirect(randomImage)
+    return res.json({ data: randomImage})
 }}
 
 module.exports = new Pensador

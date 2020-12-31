@@ -12,7 +12,7 @@ class JamendoController {
       return songInfo
     })
 
-    res.status(200).json({ songs : songList })
+    res.status(200).json({ data : songList })
   }
 
   async random (_req, res) {
@@ -25,7 +25,7 @@ class JamendoController {
     const randomize = Math.floor(Math.random() * songs.length)
     const selectedSong = linksToDownload[randomize]
 
-    return res.redirect(selectedSong)  
+    return res.json({ data: selectedSong})  
   }
 }
 
