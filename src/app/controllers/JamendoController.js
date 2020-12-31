@@ -25,7 +25,7 @@ class JamendoController {
     const randomize = Math.floor(Math.random() * songs.length)
     const selectedSong = linksToDownload[randomize]
 
-    return res.redirect(selectedSong)  
+    return res.json({song: selectedSong})  
   }
 }
 

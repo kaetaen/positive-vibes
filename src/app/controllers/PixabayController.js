@@ -12,7 +12,7 @@ class Pensador {
     const randomize = Math.floor(Math.random() * images.length)
     const randomImage = images[randomize]
 
-    return res.redirect(randomImage)
+    return res.json({img: randomImage})
 }}
 
 module.exports = new Pensador
