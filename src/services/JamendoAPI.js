@@ -7,15 +7,32 @@ class JamendoAPI {
   }
 
   async connect () {
+    const playlistID = this.setPlaylistID()
     const api = await axios({
       url: 'https://api.jamendo.com/v3.0/playlists/tracks',
       params: {
         client_id: this.client_id,
-        id: '500456046'
+        id: playlistID
       }
     })
 
     return api
+  }
+
+  setPlaylistID() {
+    const playlists = [
+      '500405631',
+      '500361729',
+      '500342341',
+      '500307898',
+      '89178583',
+      '89151915',
+      '500148373',
+      '500157769'
+    ]
+    const randInt = Math.floor(Math.random() * playlists.length)
+
+    return playlists[randInt]
   }
 
   async parseTracks () {
