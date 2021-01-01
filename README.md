@@ -7,7 +7,7 @@
 
 ## Descrição 
 
-Positive Vibes é uma API criada para servir conteúdo multimídia obtidas dos sites Jamendo, Pixabay, Pensador para o bot no telegram [Clara PeaceMaker](https://t.me/claraPeacemakerBot). Contudo por ser uma API livre, pode ser utilizada para inúmeros propósitos em inúmeras aplicações, portanto deixei este repositório à parte do bot.
+Positive Vibes é uma API criada para servir conteúdo multimídia obtidas dos sites Jamendo, Pixabay, Pensador e do podcast Acenda sua Luz para o bot no telegram [Clara PeaceMaker](https://t.me/claraPeacemakerBot). Contudo por ser uma API livre, pode ser utilizada para inúmeros propósitos em inúmeras aplicações, portanto deixei este repositório à parte do bot.
 
 ## Requisitos
 
@@ -23,7 +23,7 @@ O arquivo `.env` exige duas váriaveis de ambiente configuradas:
 - `PIXABAY_API_KEY` 
 - `JAMENDO_CLIENT_ID`
 
-O Jamendo fornece as músicas e o Pixabay as imagens. As frases do Pensador são obtidas através de raspagem de dados.
+O Jamendo fornece as músicas e o Pixabay as imagens. As frases do Pensador são obtidas através de raspagem de dados. Os audios do podcast Acenda sua Luz são obtidos por meio do feed RSS.
 
 ### Jamendo
 
@@ -58,13 +58,21 @@ Retorna um arquivo de audio MP3 aleatório.
 
 ### Imagens
 
- > /images
+> /images
 
 Retorna um JSON contendo todas as imagens.
 
 > /images/random
 
 Retorna um arquivo de imagem aleatório.
+
+> /podcasts
+
+Retorna um JSON contendo todos os episódios do podcast Acenda sua Luz.
+
+> /podcasts/random
+
+Retorna um JSON de um episódio aleatório.
 
 ## Agradecimentos
 
@@ -73,3 +81,4 @@ Agradecimentos ao Jamendo, Pixabay e o  Pensador. Acessem as páginas deles e d�
 - [Pixabay](https://pixabay.com/pt/)
 - [Jamendo](https://www.jamendo.com/)
 - [O Pensador](https://www.pensador.com/)
+- [Podcast Acenda sua Luz](https://open.spotify.com/show/2GFx3Gf0R4KoCaPand0hYQ)
