@@ -2,29 +2,17 @@ const JamendoAPI = require('../../services/JamendoAPI')
 
 class JamendoController {
   async index (_req, res) {
-    const songs = await JamendoAPI
-    
-    const songList = songs.map((song, _index) => {
-      const { name, artist_name } = song
-      const songInfo = {name, artist_name} 
-
-      return songInfo
-    })
-    
-    res.status(200).json({ data: songList })
+    const tracks = await new JamendoAPI().parseTracks()
+  
+    res.status(200).json({ data: tracks }) 
   }
 
   async random (_req, res) {
-    const songs = await JamendoAPI
-    
-    const linksToDownload = songs.map((link, _index) => {
-      return link.audiodownload
-    })
+    const tracks = await new JamendoAPI().parseTracks()
+    const randInt = Math.floor(Math.random() * tracks.length)
+    const selectedTrack = tracks[randInt]
 
-    const randomize = Math.floor(Math.random() * songs.length)
-    const selectedSong = linksToDownload[randomize]
-
-    return res.json({ data: selectedSong})  
+    return res.status(200).json({ data: selectedTrack })
   }
 }
 
