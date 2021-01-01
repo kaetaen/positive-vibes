@@ -16,9 +16,11 @@ class Podcasts {
 
       return {
         title,
-        mediaLink
+        url
       }
     })
+
+    return episodesDetails
   }
 }
 
