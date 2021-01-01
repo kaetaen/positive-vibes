@@ -1,4 +1,5 @@
 const axios = require('axios')
+const { Random } = require('random-js')
 require('dotenv').config()
 
 class JamendoAPI {
@@ -18,7 +19,7 @@ class JamendoAPI {
       '500157769',
       '500581032'
     ]
-    const randomPlaylist = Math.floor(Math.random() * playlists.length)
+    const randomPlaylist = new Random().integer(0, playlists.length)
     const api = await axios({
       url: 'https://api.jamendo.com/v3.0/playlists/tracks',
       params: {

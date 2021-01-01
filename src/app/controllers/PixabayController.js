@@ -1,6 +1,7 @@
+const { Random } = require('random-js')
 const Pixabay = require('../../services/PixabayAPI')
 
-class Pensador {
+class PixabayAPI {
   async index (_req, res) {
     const images = await Pixabay.parseImages()
     
@@ -9,11 +10,11 @@ class Pensador {
 
   async random (_req, res) {
     const images = await Pixabay.parseImages()
-    const randomize = Math.floor(Math.random() * images.length)
-    const randomImage = images[randomize]
+    const randInt = new Random().integer(0, images.length)
+    const randomImage = images[randInt]
 
     return res.json({ data: randomImage })
   }
 }
 
-module.exports = new Pensador
+module.exports = new PixabayAPI

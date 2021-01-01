@@ -1,3 +1,4 @@
+const { Random } = require('random-js')
 const JamendoAPI = require('../../services/JamendoAPI')
 
 class JamendoController {
@@ -9,7 +10,7 @@ class JamendoController {
 
   async random (_req, res) {
     const tracks = await new JamendoAPI().parseTracks()
-    const randInt = Math.floor(Math.random() * tracks.length)
+    const randInt = new Random().integer(0, tracks.length)
     const selectedTrack = tracks[randInt]
 
     return res.status(200).json({ data: selectedTrack })
